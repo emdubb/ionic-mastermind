@@ -3,7 +3,7 @@ angular.module('starter.controllers', [])
 .controller('AppCtrl', function($scope, $ionicModal) {
 
   // These icon classes are for mapping the selected guesses to the UI
-  $scope.icons = ['ion-social-apple', 'ion-social-android','ion-social-angular','ion-social-html5'];
+  $scope.icons = ['ion-social-usd', 'ion-social-bitcoin','ion-social-yen','ion-social-euro'];
 
   // The current selected icon to assign to any clicked position.
   // TODO: Needs to be set when buttons in menu.html are clicked.
@@ -18,7 +18,7 @@ angular.module('starter.controllers', [])
   // Run newGame() upon loading
   $scope.newGame();
 
-  /* 
+  /*
   TODO: Call this function when the user clicks a 'score' button.
         The 'score' button should remain disabled until all positions have a value.
         Maybe a button with an icon of a checkmark would be a good UI choice? Or,
