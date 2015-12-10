@@ -14,12 +14,11 @@
 
     <ion-list ng-repeat="turn in turns">
       <!-- TODO: Repeat for each turn -->
-      {{turn}}
       <ion-item class="row turn">
 
         <div class="col col-10 text-center turn-num">
           <!-- TODO: Display turn number here -->
-          1
+          {{turns.length}}
         </div>
         <div class="col text-center left-border">
           <!-- TODO:
@@ -33,10 +32,10 @@
               to the currently selected icon.
           -->
           <div class="button-bar">
-            <button class="button button-icon icon //add-class-here"></button>
-            <button class="button button-icon icon //add-class-here"></button>
-            <button class="button button-icon icon //add-class-here"></button>
-            <button class="button button-icon icon //add-class-here"></button>
+            <button class="button button-icon icon {{turns[0].choice[0] !== null ? icons[turns[0].choice[0]] : 'ion-asterisk'}}" ng-click="turns[0].choice[0] = selectedIcon"></button>
+            <button class="button button-icon icon {{turns[0].choice[1] !== null ? icons[turns[0].choice[1]] : 'ion-asterisk'}}" ng-click="turns[0].choice[1] = selectedIcon"></button>
+            <button class="button button-icon icon {{turns[0].choice[2] !== null ? icons[turns[0].choice[2]] : 'ion-asterisk'}}" ng-click="turns[0].choice[2] = selectedIcon"></button>
+            <button class="button button-icon icon {{turns[0].choice[3] !== null ? icons[turns[0].choice[3]] : 'ion-asterisk'}}" ng-click="turns[0].choice[3] = selectedIcon"></button>
           </div>
         </div>
         <div class="col col-20 text-center left-border">
