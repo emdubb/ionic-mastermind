@@ -4,13 +4,12 @@ angular.module('starter.controllers', [])
 
   // These icon classes are for mapping the selected guesses to the UI
   $scope.icons = ['ion-social-usd', 'ion-social-bitcoin','ion-social-yen','ion-social-euro'];
-
   // The current selected icon to assign to any clicked position.
   // TODO: Needs to be set when buttons in menu.html are clicked.
   $scope.selectIcon = function (number) {
     $scope.selectedIcon = number;
+    console.log($scope.selectedIcon);
   }
-
   // Initialize game state
   $scope.newGame = function() {
     var secretCode = [];
@@ -20,13 +19,16 @@ angular.module('starter.controllers', [])
       secretCode.push($scope.icons[randNum])
     };
     console.log(secretCode);
+    $scope.turns = [{
+      choice: [null, null, null, null],
+      almost: null,
+      perfect: null
+    }];
+    $scope.selectIcon(0);
     return secretCode;
 
-    $scope.turns = [];
-    $scope.selectedIcon = 0;
 
   };
-
   // Run newGame() upon loading
   $scope.newGame();
 
