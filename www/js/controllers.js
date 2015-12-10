@@ -1,13 +1,15 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal) {
+.controller('AppCtrl', function($scope, $ionicModal, $log) {
 
   // These icon classes are for mapping the selected guesses to the UI
   $scope.icons = ['ion-social-usd', 'ion-social-bitcoin','ion-social-yen','ion-social-euro'];
 
   // The current selected icon to assign to any clicked position.
   // TODO: Needs to be set when buttons in menu.html are clicked.
-  $scope.selectedIcon = 0;
+  $scope.selectIcon = function (number) {
+    $scope.selectedIcon = number;
+  }
 
   // Initialize game state
   $scope.newGame = function() {
