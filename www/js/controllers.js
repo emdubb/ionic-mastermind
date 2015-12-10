@@ -14,6 +14,18 @@ angular.module('starter.controllers', [])
   // Initialize game state
   $scope.newGame = function() {
     // TODO: Set all data properties/structures to their beginning state
+    var secretCode = [];
+
+      for (var i = 0; i < 4; i++) {
+        var randNum = Math.floor(Math.random() * 4)
+        secretCode.push($scope.icons[randNum])
+      };
+
+        return secretCode;
+      //randomize icons index
+      //and store somewhere
+      //set selected icon to 0
+      //set store to 0
 
   };
 
