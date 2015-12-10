@@ -10,10 +10,11 @@
       Score
     </div>
   </ion-header-bar>
-    <ion-content  ng-controller="AppCtrl">{{newGame()}}
+    <ion-content>
 
-    <ion-list>
+    <ion-list ng-repeat="turn in turns">
       <!-- TODO: Repeat for each turn -->
+      {{turn}}
       <ion-item class="row turn">
 
         <div class="col col-10 text-center turn-num">
